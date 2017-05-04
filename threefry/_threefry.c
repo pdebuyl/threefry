@@ -40,6 +40,13 @@ threefry_t threefry(threefry_t p, threefry_t k) {
   return x;
 }
 
+uint64_t threefry_uint64(threefry_t *c, threefry_t *k) {
+  threefry_t x;
+  x = threefry(*c, *k);
+  c->c0++;
+  return x.c0;
+}
+
 double threefry_double(threefry_t *c, threefry_t *k) {
   threefry_t x;
   x = threefry(*c, *k);
