@@ -4,3 +4,4 @@ dist/
 *.pyc
 *.so
 threefry.egg-info
+threefry/threefry.c
