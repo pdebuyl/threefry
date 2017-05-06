@@ -1,13 +1,18 @@
 from setuptools import setup, Extension
 from Cython.Build import cythonize
 
+VERSION = '0.1.0.dev1'
+
 threefry_ext = cythonize(Extension("*",
                      sources=["threefry/threefry.pyx", "threefry/_threefry.c"],),
                      include_path=["threefry"],
                      )
+with open('threefry/version.py', 'w') as version_f:
+    version_f.write("__version__ = '{__version__}'".format(__version__=VERSION))
+
 
 setup(name='threefry',
-      version='0.1.0.dev0',
+      version=VERSION,
       description='Threefry random number generator',
       author='Pierre de Buyl',
       license='BSD',

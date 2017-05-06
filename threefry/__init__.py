@@ -1,4 +1,5 @@
 from .threefry import rng
+from .version import __version__ as __version__
 
 def get_include():
     import threefry
