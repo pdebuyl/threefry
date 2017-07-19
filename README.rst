@@ -7,9 +7,9 @@ A Cython implementation of the Threefry random number generator, part of
 Installation
 ------------
 
-    pip3 install git+https://github.com/pdebuyl/threefry
+    pip3 install --user threefry
 
 or
 
-    python3 -m pip install git+https://github.com/pdebuyl/threefry
+    python3 -m pip install --user threefry
 
