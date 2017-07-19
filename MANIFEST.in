@@ -1,0 +1,6 @@
+include LICENSE README.rst
+recursive-include threefry *.pxd *.pyx
+include threefry/_threefry.c
+include threefry/threefry.c
+include threefry/threefry.h
+prune examples
