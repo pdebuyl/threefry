@@ -1,7 +1,7 @@
 from setuptools import setup, Extension
 from Cython.Build import cythonize
 
-VERSION = '0.1.0'
+VERSION = '0.1.1-dev0'
 
 threefry_ext = cythonize(Extension("*",
                                    sources=["threefry/threefry.pyx",
