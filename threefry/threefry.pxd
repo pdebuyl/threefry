@@ -5,6 +5,7 @@ cdef extern from "threefry.h":
         uint64_t c0
         uint64_t c1
 
+    threefry_t threefry(threefry_t c, threefry_t k)
     uint64_t threefry_uint64(threefry_t *c, threefry_t *k)
     double threefry_double(threefry_t *c, threefry_t *k)
 

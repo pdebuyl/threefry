@@ -20,6 +20,12 @@ cdef class rng:
         self.set(0, (key1, key2))
         self.has_gaussian = False
 
+    def random_uint64_pair(self):
+        cdef threefry_t x
+        x = threefry(self.counter, self.key)
+        self.counter.c0 += 1
+        return x.c0, x.c1
+
     cpdef uint64_t random_uint64(self):
         return threefry_uint64(&self.counter, &self.key)
 
