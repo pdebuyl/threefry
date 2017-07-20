@@ -1,5 +1,3 @@
-import numpy as np
-cimport numpy as np
 from libc.math cimport sqrt, log
 from libc.stdint cimport uint64_t
 
